@@ -2,17 +2,17 @@ version: "2"
 
 services:
   rng:
-    build: rng
+    build: https://raw.githubusercontent.com/nheinemans/orchestration-workshop/master/dockercoins/rng/Dockerfile
     ports:
     - "8001:80"
 
   hasher:
-    build: hasher
+    build: https://raw.githubusercontent.com/nheinemans/orchestration-workshop/master/dockercoins/hasher/Dockerfile
     ports:
     - "8002:80"
 
   webui:
-    build: webui
+    build: https://raw.githubusercontent.com/nheinemans/orchestration-workshop/master/dockercoins/webui/Dockerfile
     ports:
     - "8000:80"
     volumes:
@@ -22,5 +22,5 @@ services:
     image: redis
 
   worker:
-    build: worker
+    build: https://raw.githubusercontent.com/nheinemans/orchestration-workshop/master/dockercoins/worker/Dockerfile
 
